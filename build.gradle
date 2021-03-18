@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+group 'org.test.assignment'
+version '1.0-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.6.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'org.test.assignment.Main'
+}
+
+run {
+    standardInput = System.in
+}
